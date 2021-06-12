@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- ui css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- lightcase css -->
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <!-- data table css -->
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+
+    <title>Thornior</title>
+</head>
+<body>
+    
+
+    <div class="main-content">
+
+    <!-- vertica sidebar start -->
+    <div class="vertical-sidebar" id="slideNav">
+        <div class="sidebar-content">
+            <div class="brand-logo">
+                <img src="assets/images/logo/01.png" alt="">
+                <span class="close-icon d-md-none float-end me-2" onclick="menuAnimation(this)">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <div class="seller-thumb">
+                <div class="img-thumb">
+                    <img src="assets/images/blogger/user.png" alt="">
+                </div>
+                <div class="text-thumb">
+                    <p>Natasa</p>
+                    <span class="online-status">@natasa180</span>
+                </div>
+                <div class="post-status">
+                    <ul class="status-list">
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu-list">
+                    <div class="menu-title">
+                        <p>Meny</p>
+                    </div>
+                    <li><a href="#0" class="active"><span><i class="fas fa-th-large"></i></span><span>Overview</span></a></li>
+                    <li><a href="#0"><span><i class="fab fa-blogger-b"></i></span><span>Blog</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-book-open"></i></span><span>Library</span></a></li>
+                    <li class="accordion" id="accordionExample">
+                        <a href="#0" class="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span>
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                            <span>Social Links</span>
+                        </a>
+                        <!-- <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <ul class="sub-menu">
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Brands</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Product</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Categories</span></a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a href="#0"><span><i class="fas fa-cog"></i></span><span>Settings</span></a></li>
+                    <div class="menu-title">
+                        <p>Create</p>
+                    </div>
+                    <li><a href="#0"><span><i class="fas fa-paste"></i></span><span>Post</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-list-ol"></i></span><span>Category</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-gopuram"></i></span><span>Change Template</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <!-- vertica sidebar ends  -->
+
+
+    <!-- content-right start -->
+    <div class="content-right" id="contentWidth">
+
+        <!-- top navbar start -->
+        <div class="top-navbar">
+            <div class="container-fluid p-0">
+                <div class="nav-item">
+                   <div class="left-menu">
+                        <div class="nav-toggle me-3" onclick="menuAnimation(this)">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <ul class="left-menulist">
+                            <li class="active">
+                                <a href="#0">Admin</a>
+                            </li>
+                            <li>
+                                <a href="#0">Explore</a>
+                            </li>
+                        </ul>
+                   </div>
+                    <div class="menu-item">
+                        <ul class="item-list" id="topList">
+                            <li><a href="#"><span><i class="fa fa-bell"></i></span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span><img src="assets/images/blogger/user.png" height="35" width="35" alt=""></span>
+                                    <span class="ml-1">Natasa</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="top-toggle d-block d-sm-none" onclick="topNav(this)">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top navbar ends  -->
+
+        <!-- admin area start -->
+        <section class="blogger-admin style-two">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="row">
+                        <div class="col-xl-9 col-12">
+                            <div class="bloger-card">
+                                <div class="blogs-header">
+                                    <div class="active-status">
+                                        <h4>Advertisment</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="bloger-card mb-4">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Top Banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button" class="btn"><span>Add ad</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item active">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="bloger-card mb-4">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status style-one">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Video Banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button"  class="btn"><span>Add ad</span></button>                                                  
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="bloger-card">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status style-two">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Side Banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button"  class="btn"><span>Add ad</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="bloger-card mb-4">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status style-three">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Large Banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button"  class="btn"><span>Add ad</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/01.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="bloger-card mb-4">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Product Side banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button"  class="btn"><span>Add ad</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/01.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="bloger-card">
+                                            <div class="adds-header border-bottom">
+                                                <div class="active-status style-two">
+                                                    <span class="placeholder"></span>
+                                                    <h4>Discount code Banner</h4>
+                                                </div>
+                                                <div class="view-more dropbottom">
+                                                    <button type="button"  class="btn"><span>Add ad</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="blogs-body">
+                                                <ul class="add-list">
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/01.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                                    <li><a class="dropdown-item" href="#">View info</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-item">
+                                                            <div class="item-left">
+                                                                <div class="item-thumb">
+                                                                    <img src="assets/images/blog/latest/01.jpg" alt="">
+                                                                </div>
+                                                                <div class="item-text">
+                                                                    <span>Company</span>
+                                                                    <h6>Top Banner</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-middle">
+                                                                <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                                <span><i class="fa fa-long-arrow-alt-right"></i></span><span>2021/02/02</span>
+                                                            </div>
+                                                            <div class="item-right">
+                                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                                                <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                        <li><a class="dropdown-item" href="#">View info</a></li>
+                                                        <li><a class="dropdown-item" href="#">Statistics</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pause</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="modal-btn">
+                                    <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><span><i class="fa fa-plus"></i></span><span>Create ad spot</span></button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-8 col-12">
+                            <div class="bloger-card mb-4 mt-4 mt-xl-0">
+                                <div class="blogs-header">
+                                    <div class="active-status">
+                                        <h4>Library (ads)</h4>
+                                    </div>
+                                    <div class="view-more">
+                                        <a href="#0">See All</a>
+                                    </div>
+                                </div>
+                                <div class="blogs-body">
+                                    <div id="tabs">
+                                        <ul>
+                                            <li><a href="#tabs-1">Saved</a></li>
+                                            <li><a href="#tabs-2">Started</a></li>
+                                            <li><a href="#tabs-3">Approve</a></li>
+                                        </ul>
+                                        <div id="tabs-1">
+                                            <ul class="add-list style-one">
+                                                <li>
+                                                    <div class="add-item">
+                                                        <div class="item-left">
+                                                            <div class="item-thumb">
+                                                                <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                <span>Company</span>
+                                                                <h6>Top Banner</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-middle">
+                                                            <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                            <span class="d-block"><i class="fa fa-long-arrow-alt-right"></i>2021/02/02</span>
+                                                        </div>
+                                                        <div class="item-right">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-item">
+                                                        <div class="item-left">
+                                                            <div class="item-thumb">
+                                                                <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                <span>Company</span>
+                                                                <h6>Top Banner</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-middle">
+                                                            <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                            <span class="d-block"><i class="fa fa-long-arrow-alt-right"></i>2021/02/02</span>
+                                                        </div>
+                                                        <div class="item-right">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-item">
+                                                        <div class="item-left">
+                                                            <div class="item-thumb">
+                                                                <img src="assets/images/blog/latest/02.jpg" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                <span>Company</span>
+                                                                <h6>Top Banner</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-middle">
+                                                            <span><i class="far fa-calendar-alt"></i></span><span>2021/02/01</span>
+                                                            <span class="d-block"><i class="fa fa-long-arrow-alt-right"></i>2021/02/02</span>
+                                                        </div>
+                                                        <div class="item-right">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="tabs-2">
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia minima pariatur eveniet magnam ex expedita atque similique ipsa rem error, assumenda voluptatibus libero, iste itaque, laboriosam iure fugiat sunt dolor.</p>
+                                        </div>
+                                        <div id="tabs-3">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempore, fuga illo saepe dolore cumque velit repudiandae nemo quidem temporibus nihil. Qui incidunt doloribus obcaecati tempora odit explicabo odio esse!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bloger-card upcoming-add">
+                                <div class="blogs-header">
+                                    <div class="active-status">
+                                        <h4>Upcoming ads</h4>
+                                    </div>
+                                    <div class="view-more">
+                                        <button type="button">Month</button>
+                                        <a href="#0">See All</a>
+                                    </div>
+                                </div>
+                                <div class="blogs-body">
+                                    <div class="up-add">
+                                        <div class="add-item">
+                                            <div class="item-left">
+                                                <span>Mon</span>
+                                                <strong>18</strong>
+                                            </div>
+                                            <div class="item-middle">
+                                                <div class="midd-title">
+                                                    <span>Company</span>
+                                                    <h6>Thornior AB</h6>
+                                                </div>
+                                                <div class="midd-date">
+                                                    <span><i class="fa fa-calendar-alt me-2"></i>18 March 2021</span>
+                                                    <span class="d-block"><i class="fa fa-long-arrow-alt-right me-2"></i>2021/02/02</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                <span>Ads spot</span>
+                                                <h6>Top Banner</h6>
+                                            </div>
+                                        </div>
+                                        <div class="add-item">
+                                            <div class="item-left">
+                                                <span>Mon</span>
+                                                <strong>18</strong>
+                                            </div>
+                                            <div class="item-middle">
+                                                <div class="midd-title">
+                                                    <span>Company</span>
+                                                    <h6>Thornior AB</h6>
+                                                </div>
+                                                <div class="midd-date">
+                                                    <span><i class="fa fa-calendar-alt me-2"></i>18 March 2021</span>
+                                                    <span class="d-block"><i class="fa fa-long-arrow-alt-right me-2"></i>2021/02/02</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                <span>Ads spot</span>
+                                                <h6>Top Banner</h6>
+                                            </div>
+                                        </div>
+                                        <div class="add-item">
+                                            <div class="item-left">
+                                                <span>Mon</span>
+                                                <strong>18</strong>
+                                            </div>
+                                            <div class="item-middle">
+                                                <div class="midd-title">
+                                                    <span>Company</span>
+                                                    <h6>Thornior AB</h6>
+                                                </div>
+                                                <div class="midd-date">
+                                                    <span><i class="fa fa-calendar-alt me-2"></i>18 March 2021</span>
+                                                    <span class="d-block"><i class="fa fa-long-arrow-alt-right me-2"></i>2021/02/02</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                <span>Ads spot</span>
+                                                <h6>Top Banner</h6>
+                                            </div>
+                                        </div>
+                                        <div class="add-item border-bottom-0">
+                                            <div class="item-left">
+                                                <span>Mon</span>
+                                                <strong>18</strong>
+                                            </div>
+                                            <div class="item-middle">
+                                                <div class="midd-title">
+                                                    <span>Company</span>
+                                                    <h6>Thornior AB</h6>
+                                                </div>
+                                                <div class="midd-date">
+                                                    <span><i class="fa fa-calendar-alt me-2"></i>18 March 2021</span>
+                                                    <span class="d-block"><i class="fa fa-long-arrow-alt-right me-2"></i>2021/02/02</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                <span>Ads spot</span>
+                                                <h6>Top Banner</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- admin area ends  -->
+
+        <!-- footer area start -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2021 | Thornior | All right reserved</p>
+                <p>V 1.8</p>
+            </div>
+        </footer>
+        <!-- footer area ends  -->
+
+        <!-- ad modal start -->
+        <div class="ad-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-btn">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Company Name</h5>
+                        <button type="button" class="btn"><span>ad add</span></button>
+                    </div>
+                    <div class="modal-banner">
+                        <div class="banner-positon">
+                            <div class="banner-content">
+                                <h6>Extend your home</h6>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, tempore!</p>
+                                <button type="button" class="btn"><span>Shope Now</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-wrapper">
+                            <div class="wrap-left">
+                                <div class="ad-type">
+                                    <div class="ad-title">
+                                        <h6>Title</h6>
+                                    </div>
+                                    <ul class="ad-list">
+                                        <li>
+                                            <h6>Type of ad</h6>
+                                            <span>Top banner</span>
+                                        </li>
+                                        <li>
+                                            <h6>Price</h6>
+                                            <span>2100€</span>
+                                        </li>
+                                        <li>
+                                            <h6>link</h6>
+                                            <span>www.thornior.com/link</span>
+                                        </li>
+                                    </ul>
+                                    <div class="ad-title">
+                                        <h6>Date & Time</h6>
+                                    </div>
+                                    <div class="add-item">
+                                        <div class="item-left">
+                                            <span>Mon</span>
+                                            <strong>18</strong>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="midd-title">
+                                                <h6>Thornior AB</h6>
+                                            </div>
+                                            <div class="midd-date">
+                                                <span><i class="fa fa-calendar-alt me-2"></i>18 March 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <h6>Time</h6>
+                                            <span>18 July 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap-right">
+                                <div class="reminder-content">
+                                    <div class="content-title">
+                                        <h6>Reminder To:</h6>
+                                    </div>
+                                    <div class="content-ht">
+                                        <span>HT<i class="fa fa-check"></i></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ad modal ends  -->
+
+    </div>
+    <!-- content-right start -->
+
+    </div>
+
+
+    <!-- optional js -->
+    <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/function.js"></script>
+
+    <script>
+        // mobile menu responsive
+        function menuAnimation(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("slideNav");
+            element.classList.toggle("navSlide");
+            var contentFade = document.getElementById("contentWidth");
+            contentFade.classList.toggle("changeWidth");
+        }
+
+        // change content width
+        function topNav(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("topList");
+            element.classList.toggle("top-list");
+        }
+
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+
+    </script>
+
+</body>
+</html>

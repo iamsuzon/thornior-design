@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- ui css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- lightcase css -->
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <!-- data table css -->
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+
+    <title>Thornior</title>
+</head>
+<body>
+    
+
+    <div class="main-content">
+
+    <!-- vertica sidebar start -->
+    <div class="vertical-sidebar" id="slideNav">
+        <div class="sidebar-content">
+            <div class="brand-logo">
+                <img src="assets/images/logo/01.png" alt="">
+                <span class="close-icon d-md-none float-end me-2" onclick="menuAnimation(this)">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <div class="seller-thumb">
+                <div class="img-thumb">
+                    <img src="assets/images/blogger/user.png" alt="">
+                </div>
+                <div class="text-thumb">
+                    <p>Natasa</p>
+                    <span class="online-status">@natasa180</span>
+                </div>
+                <div class="post-status">
+                    <ul class="status-list">
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu-list">
+                    <div class="menu-title">
+                        <p>Meny</p>
+                    </div>
+                    <li><a href="#0" class="active"><span><i class="fas fa-th-large"></i></span><span>Overview</span></a></li>
+                    <li><a href="#0"><span><i class="fab fa-blogger-b"></i></span><span>Blog</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-book-open"></i></span><span>Library</span></a></li>
+                    <li class="accordion" id="accordionExample">
+                        <a href="#0" class="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span>
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                            <span>Social Links</span>
+                        </a>
+                        <!-- <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <ul class="sub-menu">
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Brands</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Product</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Categories</span></a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a href="#0"><span><i class="fas fa-cog"></i></span><span>Settings</span></a></li>
+                    <div class="menu-title">
+                        <p>Create</p>
+                    </div>
+                    <li><a href="#0"><span><i class="fas fa-paste"></i></span><span>Post</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-list-ol"></i></span><span>Category</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-gopuram"></i></span><span>Change Template</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <!-- vertica sidebar ends  -->
+
+
+    <!-- content-right start -->
+    <div class="content-right" id="contentWidth">
+
+        <!-- top navbar start -->
+        <div class="top-navbar">
+            <div class="container-fluid p-0">
+                <div class="nav-item">
+                   <div class="left-menu">
+                        <div class="nav-toggle me-3" onclick="menuAnimation(this)">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <ul class="left-menulist">
+                            <li class="active">
+                                <a href="#0">Admin</a>
+                            </li>
+                            <li>
+                                <a href="#0">Explore</a>
+                            </li>
+                        </ul>
+                   </div>
+                    <div class="menu-item">
+                        <ul class="item-list" id="topList">
+                            <li><a href="#"><span><i class="fa fa-bell"></i></span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span><img src="assets/images/blogger/user.png" height="35" width="35" alt=""></span>
+                                    <span class="ml-1">Natasa</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="top-toggle d-block d-sm-none" onclick="topNav(this)">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top navbar ends  -->
+
+        <!-- admin area start -->
+        <section class="blogger-admin style-two">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ad-table">
+                                <div class="table-headertop">
+                                    <h4><i class="fa fa-angle-left me-1"></i> Library</h4>
+                                </div>
+                                <div class="table-headerbottom">
+                                    <h5>Saved ads</h5>
+                                    <button type="button" class="btn"><span><i class="fa fa-plus me-2"></i></span><span>Create new ad</span></button>
+                                </div>
+                                <div class="bloger-card">
+                                    <div class="table-responsive">
+                                        <table class="table caption-top">
+                                            <thead>
+                                              <tr>
+                                                <th>Title</th>
+                                                <th>Category</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Last update</th>
+                                                <th></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/01.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/02.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/03.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/04.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/05.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/06.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/07.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/08.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/09.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/05.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/02.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/03.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/04.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                    <div class="ads-item">
+                                                        <div class="item-thumb">
+                                                            <img src="assets/images/blog/category/05.jpg" alt="">
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <h6>Name Template</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td>
+                                                    <span><i class="fa fa-calendar-alt me-1"></i> latest update <strong>2021-02-01</strong></span>
+                                                </td>
+                                                <td><span>User friendly layout</span></td>
+                                                <td><span>2021-02-28</span></td>
+                                                <td>
+                                                    <div class="ads-btn">
+                                                        <button type="button" class="btn bg-light"><span class="text-dark">Edit</span></button>
+                                                        <button type="button" class="btn ms-2"><span>Publish</span></button>
+                                                    </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- admin area ends  -->
+
+        <!-- footer area start -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2021 | Thornior | All right reserved</p>
+                <p>V 1.8</p>
+            </div>
+        </footer>
+        <!-- footer area ends  -->
+
+    </div>
+    <!-- content-right start -->
+
+    </div>
+
+
+    <!-- optional js -->
+    <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/function.js"></script>
+
+    <script>
+        // mobile menu responsive
+        function menuAnimation(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("slideNav");
+            element.classList.toggle("navSlide");
+            var contentFade = document.getElementById("contentWidth");
+            contentFade.classList.toggle("changeWidth");
+        }
+
+        // change content width
+        function topNav(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("topList");
+            element.classList.toggle("top-list");
+        }
+
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+
+    </script>
+
+</body>
+</html>

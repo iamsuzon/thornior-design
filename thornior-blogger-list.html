@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- ui css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- lightcase css -->
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+
+    <title>Thornior</title>
+</head>
+<body>
+    
+
+    <div class="main-content">
+
+    <!-- vertica sidebar start -->
+    <div class="vertical-sidebar" id="slideNav">
+        <div class="sidebar-content">
+            <div class="brand-logo">
+                <img src="assets/images/logo/01.png" alt="">
+                <span class="close-icon d-md-none float-end me-2" onclick="menuAnimation(this)">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <div class="seller-thumb">
+                <div class="img-thumb">
+                    <img src="assets/images/blogger/user.png" alt="">
+                </div>
+                <div class="text-thumb">
+                    <p>Natasa</p>
+                    <span class="online-status">@natasa180</span>
+                </div>
+                <div class="post-status">
+                    <ul class="status-list">
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                        <li>
+                            <strong>28</strong>
+                            <p>Posts</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu-list">
+                    <div class="menu-title">
+                        <p>Meny</p>
+                    </div>
+                    <li><a href="#0" class="active"><span><i class="fas fa-th-large"></i></span><span>Overview</span></a></li>
+                    <li><a href="#0"><span><i class="fab fa-blogger-b"></i></span><span>Blog</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-book-open"></i></span><span>Library</span></a></li>
+                    <li class="accordion" id="accordionExample">
+                        <a href="#0" class="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span>
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                            <span>Social Links</span>
+                        </a>
+                        <!-- <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <ul class="sub-menu">
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Brands</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Product</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Categories</span></a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a href="#0"><span><i class="fas fa-cog"></i></span><span>Settings</span></a></li>
+                    <div class="menu-title">
+                        <p>Create</p>
+                    </div>
+                    <li><a href="#0"><span><i class="fas fa-paste"></i></span><span>Post</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-list-ol"></i></span><span>Category</span></a></li>
+                    <li><a href="#0"><span><i class="fas fa-gopuram"></i></span><span>Change Template</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <!-- vertica sidebar ends  -->
+
+
+    <!-- content-right start -->
+    <div class="content-right" id="contentWidth">
+
+        <!-- top navbar start -->
+        <div class="top-navbar">
+            <div class="container-fluid p-0">
+                <div class="nav-item">
+                   <div class="left-menu">
+                        <div class="nav-toggle me-3" onclick="menuAnimation(this)">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <ul class="left-menulist">
+                            <li class="active">
+                                <a href="#0">Admin</a>
+                            </li>
+                            <li>
+                                <a href="#0">Explore</a>
+                            </li>
+                        </ul>
+                   </div>
+                    <div class="menu-item">
+                        <ul class="item-list" id="topList">
+                            <li><a href="#"><span><i class="fa fa-bell"></i></span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span><img src="assets/images/blogger/user.png" height="35" width="35" alt=""></span>
+                                    <span class="ml-1">Natasa</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+                        <div class="top-toggle d-block d-sm-none" onclick="topNav(this)">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top navbar ends  -->
+
+        <!-- admin area start -->
+        <section class="blogger-admin style-one">
+            <div class="container p-0">
+                <div class="section-wrapper">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="blogger-menu">
+                                <ul class="menu-list">
+                                    <div class="menu-header">
+                                        <h6>All Posts</h6>
+                                    </div>
+                                    <li class="accordion-item">
+                                        <a href="#0" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Categories</a>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <a href="#0">Diy</a>
+                                            <a href="#0">Styling</a>
+                                            <a href="#0">Makeover</a>
+                                            <a href="#0">Upcycle</a>
+                                            <a href="#0">Hack</a>
+                                        </div>
+                                    </li>
+                                    <div class="menu-header">
+                                        <h6>Blogs</h6>
+                                    </div>
+                                    <li class="accordion-item">
+                                        <a href="#0" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Room</a>
+                                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <a href="#0">Bathroom</a>
+                                            <a href="#0">Bedroom</a>
+                                            <a href="#0">Living room</a>
+                                            <a href="#0">Kithchen</a>
+                                            <a href="#0">Kids room</a>
+                                            <a href="#0">Out Dor</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="bloger-card mb-4">
+                                <div class="post-header">
+                                    <div class="head-title">
+                                        <h6>Search Post</h6>
+                                    </div>
+                                    <div class="search-fild">
+                                        <input type="text" id="searchPost">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                                <div class="post-wrapper">
+                                    <div class="wrap-sort">
+                                        <span class="me-2">Sort by</span>
+                                        <button type="button" class="btn"><span>Date</span></button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>18</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/01.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>19</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/02.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>20</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/03.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>21</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/04.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>22</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/05.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>23</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/06.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>24</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/06.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>25</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/07.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blogger-item style-one">
+                                                <div class="item-crount">
+                                                    <span>Mon</span>
+                                                    <h6>26</h6>
+                                                </div>
+                                                <div class="item-thumb">
+                                                    <img src="assets/images/blog/category/08.jpg" alt="">
+                                                </div>
+                                                <div class="item-text">
+                                                    <span>28 Minutes ago</span>
+                                                    <h6>Get inspiration to you here a few tips</h6>
+                                                    <div class="author">
+                                                        <div class="auth-thumb">
+                                                            <img src="assets/images/blog/latest/01.png" alt="">
+                                                        </div>
+                                                        <div class="auth-text">
+                                                            <span>by <strong>Melina Menz</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <div class="bloger-card style-border">
+                                <div id="tabs">
+                                    <ul>
+                                        <li><a href="#tabs-1">Posts</a></li>
+                                        <li><a href="#tabs-2">Statistics</a></li>
+                                    </ul>
+                                    <div id="tabs-1">
+
+                                        <!-- page header area start -->
+                                        <section class="page-header">
+                                            <div class="container">
+                                                <div class="header-content">
+                                                    <h5>Get New inspiration to your living room, here a basic tips</h5>
+                                                    <span><strong>By :</strong> Anna Laming</span>
+                                                    <span class="ms-4"><i class="fa fa-clock me-2"></i>11 Min</span>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- page header area ends  -->
+
+                                        <!-- Blog video banner start -->
+                                        <section class="blog-video-banner">
+                                            <div class="container">
+                                                <div class="video-position">
+                                                    <div class="overlay"></div>
+                                                    <div class="video-thumb">
+                                                        <img src="assets/images/banner/video/01.jpg" alt="">
+                                                        <div class="video-icon">
+                                                            <a href="https://www.youtube.com/embed/NGxNy_ZoKWM" data-rel="lightcase"><i class="fa fa-play"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Blog video banner ends  -->
+
+                                        <!-- common blog start -->
+                                        <div class="blog-area style-one">
+                                            <div class="section-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-11 offset-sm-1 col-12">
+                                                        <div class="blog-description">
+                                                            <div class="blog-social">
+                                                                <ul class="social-list">
+                                                                    <li>
+                                                                        <a href="#0"><i class="fab fa-facebook"></i></a> 
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="des-text pt-3">
+                                                                <h4>Here are a few of the blogs that remin fresh, inspiring and a great representation of swedish design and trends today</h4>
+                                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum consequuntur, nobis suscipit at, dicta dolor minima eligendi recusandae magnam, ullam voluptatem dignissimos vero deleniti tempore voluptate expedita architecto nesciunt amet debitis optio eveniet? Eos voluptatum cupiditate laboriosam. Non illo dolorem aut, quisquam aliquam nihil rerum hic nesciunt. Qui, harum eos.</p>
+                                                            </div>
+                                                            <div class="des-tips">
+                                                                <ul class="tips-list">
+                                                                    <div class="tips-title">
+                                                                        <h3>Tips</h3>
+                                                                    </div>
+                                                                    <li>
+                                                                        <div class="tips-crount">
+                                                                            <span>01</span>
+                                                                        </div>
+                                                                        <div class="tips-text">
+                                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, impedit nam quam ex mollitia ipsam nobis et, ratione magni ducimus, inventore quasi exercitationem quaerat voluptate?</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="tips-crount">
+                                                                            <span>02</span>
+                                                                        </div>
+                                                                        <div class="tips-text">
+                                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, impedit nam quam ex mollitia ipsam nobis et, ratione magni ducimus, inventore quasi exercitationem quaerat voluptate?</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="tips-crount">
+                                                                            <span>03</span>
+                                                                        </div>
+                                                                        <div class="tips-text">
+                                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, impedit nam quam ex mollitia ipsam nobis et, ratione magni ducimus, inventore quasi exercitationem quaerat voluptate?</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="tips-crount">
+                                                                            <span>04</span>
+                                                                        </div>
+                                                                        <div class="tips-text">
+                                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, impedit nam quam ex mollitia ipsam nobis et, ratione magni ducimus, inventore quasi exercitationem quaerat voluptate?</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- common blog ends  -->
+
+                                    </div>
+                                    <div id="tabs-2">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid mollitia sint fugit possimus commodi reprehenderit debitis adipisci dolores eaque recusandae incidunt iusto natus ab fuga quam provident, similique hic earum itaque ullam, id minus laborum reiciendis voluptatum? Illum non asperiores adipisci, iure in fuga suscipit facere esse voluptate, vitae minima.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- admin area ends  -->
+
+        <!-- footer area start -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2021 | Thornior | All right reserved</p>
+                <p>V 1.8</p>
+            </div>
+        </footer>
+        <!-- footer area ends  -->
+
+    </div>
+    <!-- content-right start -->
+
+    </div>
+
+
+    <!-- optional js -->
+    <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/function.js"></script>
+
+    <script>
+        // mobile menu responsive
+        function menuAnimation(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("slideNav");
+            element.classList.toggle("navSlide");
+            var contentFade = document.getElementById("contentWidth");
+            contentFade.classList.toggle("changeWidth");
+        }
+
+        // change content width
+        function topNav(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("topList");
+            element.classList.toggle("top-list");
+        }
+
+    </script>
+
+</body>
+</html>
